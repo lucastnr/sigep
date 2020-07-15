@@ -1,0 +1,57 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.about-us #logo {
+    width: calc(100vw - 176px);
+    margin: 32px 0;
+    min-width: 80px;
+    max-width: 200px;
+}
+
+.about-us .topics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 40px;
+
+    color: white;
+    text-align: center;
+}
+
+.about-us .topics .title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: white;
+
+    max-width: 360px;
+    width: calc(100vw - 64px);
+    height: 56px;
+    border-radius: 16px;
+
+    margin-bottom: 16px;
+}
+
+.about-us .topics h1 {
+    color: black;
+    font-weight: 900;
+}
+
+.about-us .topics p {
+    line-height: 1.2;
+    
+    width: calc(100vw - 80px);
+    max-width: 360px;
+
+    font-weight: 500;
+}
+
+#bottom-container {
+    margin-bottom: 32px;
+}
