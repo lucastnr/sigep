@@ -1,16 +1,14 @@
 #home-container {
     display: flex;
 
+    background-color: var(--primary-color);
+
     width: 100vw;
     height: 100vh;
 
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-}
-
-#home-container #bottom-container {
-    margin-bottom: 24px;
 }
 
 #welcome-container {
@@ -35,4 +33,14 @@
     margin: 24px 0px;
     width: auto;
     height: 128px;
+}
+
+#home-container #bottom-container {
+    padding-bottom: 64px;
+}
+
+@media (max-height: 550px) {
+    #home-container #bottom-container {
+        padding-bottom: 12px;
+    }
 }

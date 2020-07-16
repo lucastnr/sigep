@@ -3,6 +3,7 @@
 :root {
     --primary-color: #DA291C;
     --secundary-color: #E35E54;
+    --purple-color: #761494;
 }
 
 * {
@@ -28,7 +29,6 @@ h1, h2, h3, h4, h5 {
 }
 
 body {
-    background-color: var(--primary-color);
 }
 
 .blocked {
@@ -97,20 +97,45 @@ a {
     border: 4px solid var(--secundary-color);
     border-radius: 12px;
 
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
 
     display: flex;
+    flex-direction: column;
     align-content: center;
-    justify-content: space-around;
+    justify-content: center;
 
     margin-right: 12px;
 }
 
 #bottom-container #number-box h1 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 #bottom-container .fraternity {
     line-height: 1.1;
+}
+
+@media (max-height: 550px) {
+    * {
+        font-size: 12px;
+    }
+
+    #bottom-container #number-box {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-button {
+        top: 12px;
+        left: 12px;
+    
+        width: 56px;
+        height: 56px;
+    }
+    
+    .menu-button img {
+        width: 24px;
+        height: 24px;
+    }
 }

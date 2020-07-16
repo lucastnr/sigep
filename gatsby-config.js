@@ -7,13 +7,14 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.
-        color: `tomato`,
+        color: `red`,
         // Disable the loading spinner.
-        showSpinner: true,
+        showSpinner: false,
       },
     }
   ],

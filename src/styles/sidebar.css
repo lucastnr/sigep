@@ -67,3 +67,29 @@
     flex: 1;
     text-align: center;
 }
+
+@media (max-height: 550px) {
+    .sidebar {
+        min-width: 150px;
+    }
+
+    .sidebar .side-item {
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+        height: 52px;
+    }
+
+    .sidebar .arrow {
+        background-color: var(--primary-color);
+    
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+    
+        margin: 12px 12px 12px 0;
+    }
+    
+    .sidebar .arrow img {
+        width: 24px;
+        height: 24px;
+    }
+}

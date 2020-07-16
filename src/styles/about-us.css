@@ -1,8 +1,9 @@
 .about-us {
     display: flex;
     flex-direction: column;
-
     align-items: center;
+    
+    background-color: var(--primary-color);
 }
 
 .about-us #logo {
@@ -46,12 +47,12 @@
 .about-us .topics p {
     line-height: 1.2;
     
-    width: calc(100vw - 80px);
+    width: calc(100vw - 160px);
     max-width: 360px;
 
     font-weight: 500;
 }
 
-#bottom-container {
+.about-us #bottom-container {
     margin-bottom: 32px;
 }
