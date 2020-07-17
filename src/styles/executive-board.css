@@ -5,6 +5,9 @@
 
     align-items: center;
     justify-content: space-around;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 .executive-container .logo {
@@ -78,28 +81,17 @@
         margin-top: 24px;
     }
 
-    .executive-container .arrow-container .arrow {
-        padding: 12px;
-    }
-
     .executive-container h1.board-title {
         margin-top: 0px;
     }
 
     .executive-container .meet-text {
         margin-top: 8px;
-        margin-bottom: 24px;
+        margin-bottom: 8px;
         width: 200px;
     }
 
     .executive-container #bottom-container {
         display: none;
-    }
-}
-
-@media (min-height: 500px) {
-    .executive-container {
-        width: 100vw;
-        height: 100vh;
     }
 }
