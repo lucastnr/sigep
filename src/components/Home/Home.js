@@ -10,7 +10,7 @@ export default function Home({ bottom }) {
       <div style={{height: 20}}/>
       <div id="welcome-container">
         <h2>WELCOME TO THE HUB OF</h2>
-        <img id="logo" src="../../assets/sigep-logo-white.png" alt="SigEp logo" />
+        <img id="logo" src="assets/sigep-logo-white.png" alt="SigEp logo" />
         <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/SigEpCrest.png" alt="SigEp logo 2" />
       </div>
 

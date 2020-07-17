@@ -18,7 +18,7 @@ export default function Layout({ pageContent }) {
       <Sidebar show={bar} toggle={toggleBar}/>
       <div className="menu-button">
         <button onClick={() => toggleBar()}>
-          <img src="assets/menu.svg" alt="Menu Button" />
+          <img src="../../assets/menu.svg" alt="Menu Button" />
         </button>
       </div>
 

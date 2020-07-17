@@ -7,12 +7,12 @@ import '../../styles/sidebar.css'
 const pages =
   [
     { name: "/", label: "Home" },
-    { name: "about-us", label: "About SigEp" },
-    { name: "executive-board", label: "Executive Board" },
-    { name: "recruitment", label: "Recruitment" },
-    { name: "bm-scholarship", label: "BM Scholarship" },
-    { name: "philanthropies", label: "Philanthropies" },
-    { name: "events-mixers", label: "Events & Mixers" }
+    { name: "/about-us", label: "About SigEp" },
+    { name: "/executive-board", label: "Executive Board" },
+    { name: "/recruitment", label: "Recruitment" },
+    { name: "/bm-scholarship", label: "BM Scholarship" },
+    { name: "/philanthropies", label: "Philanthropies" },
+    { name: "/events-mixers", label: "Events & Mixers" }
   ]
 
 const Sidebar = ({ show, toggle }) => {
