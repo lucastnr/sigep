@@ -4,12 +4,6 @@ import "../../styles/slider.css"
 
 import board from "./SliderData"
 
-var slidePos = []
-
-for (let i = 0; i <= board.length; i++) {
-  slidePos.push(`translateX(-${0}vw)`)
-}
-
 export default function Slider({ pos, arrow }) {
 
   if (arrow == "r") {
@@ -23,7 +17,7 @@ export default function Slider({ pos, arrow }) {
   }
 
   return (
-    <div style={{ transform: slidePos[pos] }} className={"slide-container"}>
+    <div className={"slide-container"}>
 
       {board.map(({ name, role, phone, position, image }, index) =>
         <div className={`people ${position}`}>
