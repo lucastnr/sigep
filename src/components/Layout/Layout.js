@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useState } from "react"
 import "../../styles/main.css"
 
 import Sidebar from "../Sidebar/Sidebar"
@@ -14,13 +14,11 @@ export default function Layout({ pageContent }) {
 
   return (
     <div className={mainClass}>
-      
-      <Sidebar show={bar} toggle={toggleBar}/>
-      <div className="menu-button">
-        <button onClick={() => toggleBar()}>
-          <img src="../../assets/menu.svg" alt="Menu Button" />
-        </button>
-      </div>
+
+      <Sidebar show={bar} toggle={toggleBar} />
+      <button className="menu-button" onClick={() => toggleBar()}>
+        <img src="../../assets/menu.svg" alt="Menu Button" />
+      </button>
 
       <div id="content">
         {pageContent}
