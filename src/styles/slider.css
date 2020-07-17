@@ -10,9 +10,6 @@
 .executive-container .slide-container .people-img {
     border-radius: 50%;
     width: 140px;
-
-    position: relative;
-    z-index: 0;
 }
 
 .executive-container .slide-container .names {
@@ -43,15 +40,13 @@
 
 .executive-container .slide-container .number {
     display: flex;
-    width: 180px;
 
     margin: 4px 0 4px 0;
-
-    justify-content: space-evenly;
 }
 
 .executive-container .slide-container .number img {
     width: 24px;
+    margin-right: 8px;
 }
 
 .executive-container .slide-container .number h2 {
@@ -63,12 +58,6 @@
     flex-direction: column;
     align-items: center;
     margin-top: 64px;
-
-    position: relative;
-
-    width: 40vw;
-
-    transition: 2000ms;
 }
 
 .hide {
