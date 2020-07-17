@@ -56,7 +56,7 @@ export default function ExecutiveBoard() {
       </div>
 
       <h1 className="meet-text">USE THE ARROWS TO MEET OUR EXECUTIVE BOARD</h1>
-      
+
       <BottomContent />
     </div>
   )

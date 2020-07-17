@@ -76,7 +76,7 @@
 }
 
 
-@media (max-height: 630px) {
+@media screen and (max-height: 630px) {
     .executive-container .logo {
         margin-top: 24px;
     }
@@ -93,5 +93,12 @@
 
     .executive-container #bottom-container {
         display: none;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .executive-container {
+        width: 100vw;
+        height: 100vh;
     }
 }
