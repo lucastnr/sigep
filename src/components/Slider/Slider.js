@@ -29,7 +29,7 @@ export default function Slider({ pos, arrow }) {
           </div>
 
           <div className="number">
-            <img src="assets/phone.svg" />
+            <img src="/assets/phone.svg" />
             <h2>{phone}</h2>
           </div>
         </div>
