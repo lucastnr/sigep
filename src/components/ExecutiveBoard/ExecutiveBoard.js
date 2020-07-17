@@ -1,10 +1,41 @@
 import React, { useState } from 'react'
 import BottomContent from "../BottomContent/BottomContent"
+import Slider from "../Slider/Slider"
+
+import board from "../Slider/SliderData"
 
 import "../../styles/executive-board.css"
 
+function classLeft (index) {
+  if (index == 0) {
+    return "arrow-button erase"
+  }
+  else return "arrow-button"
+}
+
+function classRight (index, total) {
+  if (index == total - 1) {
+    return "arrow-button erase"
+  }
+  else return "arrow-button"
+}
+
 export default function ExecutiveBoard() {
-  const [slide, setSlide] = useState("")
+  const [slide, setSlide] = useState({pos: 0, arrow: ""})
+
+  function increase() {
+    if (slide.pos + 1 == board.length) {
+      return
+    }
+    setSlide({pos: slide.pos + 1, arrow: "r"})
+  }
+
+  function decrease() {
+    if (slide.pos == 0) {
+      return
+    }
+    setSlide({pos: slide.pos - 1, arrow: "l"})
+  }
 
   return (
     <div className="executive-container">
@@ -12,35 +43,21 @@ export default function ExecutiveBoard() {
 
       <h1 className="board-title">2020 - 2021<br />EXECUTIVE BOARD</h1>
 
-      <div className={"mid-container"}>
-        <button onClick={() => setSlide("")}>
+      <div className={"arrow-container"}>
+        <button className={classLeft(slide.pos)} onClick={() => decrease()}>
           <img className="arrow" src="assets/back.svg" />
         </button>
 
-        <div className={"slide-container" + " " + slide}>
+        <Slider pos={slide.pos} arrow={slide.arrow}/>
 
-          <img src="assets/man.png" className="people-img" />
-
-          <div className="names">
-            <h2 className="title">Jeff Tarala</h2>
-            <h3 className="description">President</h3>
-          </div>
-
-          <div className="number">
-            <img src="assets/phone.svg" />
-            <h2>219-306-7605</h2>
-          </div>
-
-        </div>
-
-        <button onClick={() => setSlide("trs")}>
+        <button className={classRight(slide.pos, board.length)} onClick={() => increase()}>
           <img className="arrow" src="assets/next.svg" />
         </button>
       </div>
 
       <h1 className="meet-text">USE THE ARROWS TO MEET OUR EXECUTIVE BOARD</h1>
 
-      <div style={{ flex: 0.33 }} />
+      <div style={{ flex: 0.3 }} />
       <BottomContent />
     </div>
   )

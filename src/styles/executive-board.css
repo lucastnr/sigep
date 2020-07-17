@@ -5,9 +5,6 @@
 
     align-items: center;
     justify-content: space-around;
-
-    width: 100vw;
-    height: 100vh;
 }
 
 .executive-container .logo {
@@ -15,19 +12,7 @@
     min-width: 120px;
     max-width: 320px;
 
-    margin-top: 32px;
-}
-
-.executive-container .mid-container {
-    display: flex;
-
-    width: 100vw;
-
-    transform: translateX(0%);
-}
-
-.trs {
-    transform: translateX(-100vw);
+    margin-top: 12px;
 }
 
 .executive-container h1.board-title {
@@ -36,73 +21,27 @@
     color: var(--primary-color);
     
     line-height: 1.2;
-    margin: 24px 0 16px 0;
+    margin: 24px 0 12px 0;
 }
 
-.executive-container .mid-container .slide-container {
+.executive-container .arrow-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    flex: 1;
-
+    justify-content: space-between;
     align-items: center;
+    width: 100vw;
+
+    height: 200px;
+
+    margin-bottom: 80px;
 }
 
-.executive-container .mid-container .arrow {
-    width: 32px;
-    margin-bottom: 100px;
+.executive-container .arrow-container .arrow {
+    width: 40px;
+    padding: 12px;
+    margin: 16px;
+    z-index: 1;
 
-    padding: 24px;
-}
-
-.executive-container .mid-container .slide-container .people-img {
-    border-radius: 50%;
-
-    width: 140px;
-}
-
-.executive-container .mid-container .names {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.executive-container .mid-container .title {
-    text-align: center;
-    background-color: var(--primary-color);
-    border-radius: 8px;
-
-    margin-top: 12px;
-
-    width: 180px;
-}
-
-.executive-container .mid-container .description {
-    text-align: center;
-    background-color: var(--purple-color);
-    border-radius: 0 0 8px 8px;
-
-    font-size: 1em;
-
-    width: 140px;
-}
-
-.executive-container .mid-container .slide-container .number {
-    display: flex;
-    width: 200px;
-
-    margin: 4px 0 4px 0;
-
-    justify-content: space-around;
-}
-
-.executive-container .mid-container .slide-container .number img {
-    width: 24px;
-}
-
-.executive-container .mid-container .slide-container .number h2 {
-    color: #444444;
+    position: relative;
 }
 
 .executive-container .meet-text {
@@ -114,7 +53,6 @@
 
     width: 240px;
     border-radius: 10px;
-    padding: 2px;
 
     text-align: center;
 }
@@ -131,33 +69,38 @@
     border-color: rgba(240,0,0,0.2);
 }
 
-@media (max-height: 550px) {
+.erase {
+    z-index: -2;
+}
+
+
+@media (max-height: 630px) {
     .executive-container .logo {
         margin-top: 24px;
+    }
+
+    .executive-container .arrow-container .arrow {
+        padding: 12px;
     }
 
     .executive-container h1.board-title {
         margin-top: 0px;
     }
 
-    .executive-container .mid-container .people-img {
-        width: 120px;
-    }
-
-    .executive-container .mid-container .title {
-        width: 140px;
-    }
-    
-    .executive-container .mid-container .description {
-        width: 100px;
-    }
-
-    .executive-container .mid-container .meet-text {
-        margin-top: 12px;
-        width: 210px;
+    .executive-container .meet-text {
+        margin-top: 8px;
+        margin-bottom: 24px;
+        width: 200px;
     }
 
     .executive-container #bottom-container {
         display: none;
+    }
+}
+
+@media (min-height: 500px) {
+    .executive-container {
+        width: 100vw;
+        height: 100vh;
     }
 }
