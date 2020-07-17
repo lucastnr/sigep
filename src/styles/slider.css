@@ -64,10 +64,6 @@
     display: none !important;
 }
 
-.show {
-    display: block;
-}
-
 @media (max-height: 630px) {
     .executive-container .slide-container .title {    
         width: 160px;
