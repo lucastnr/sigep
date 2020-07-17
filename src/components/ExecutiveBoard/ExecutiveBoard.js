@@ -45,13 +45,13 @@ export default function ExecutiveBoard() {
 
       <div className={"arrow-container"}>
         <button className={classLeft(slide.pos)} onClick={() => decrease()}>
-          <img className="arrow" src="assets/back.svg" />
+          <img className="arrow" src="/assets/back.svg" />
         </button>
 
         <Slider pos={slide.pos} arrow={slide.arrow}/>
 
         <button className={classRight(slide.pos, board.length)} onClick={() => increase()}>
-          <img className="arrow" src="assets/next.svg" />
+          <img className="arrow" src="/assets/next.svg" />
         </button>
       </div>
 

@@ -9,7 +9,7 @@ import "../../styles/about-us.css"
 export default function AboutUs() {
   return (
     <div className="about-us">
-        <img id="logo" src="assets/sigep-logo-white.png" alt="SigEp Logo" />
+        <img id="logo" src="/assets/sigep-logo-white.png" alt="SigEp Logo" />
 
         {data.map(({ title, content }) =>
           <div className="topics">

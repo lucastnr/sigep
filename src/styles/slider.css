@@ -3,8 +3,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    transition: 600ms;
 }
 
 .executive-container .slide-container .people-img {
