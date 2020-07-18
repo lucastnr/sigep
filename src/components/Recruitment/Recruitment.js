@@ -8,7 +8,7 @@ export default function Recruitment() {
         <div className="recruitment-container">
             <div className="welcome">
                 <h1>WELCOME TO</h1>
-                <img className="logo" src="assets/sigep-logo-white.png" alt="SigEp logo" />
+                <img className="logo" src="/assets/sigep-logo-white.png" alt="SigEp logo" />
                 <h2>WE'RE EXCITED THAT YOU ARE INTERESTED
                     IN BECOMING PART OF OUR BROTHERHOOD!</h2>
             </div>
