@@ -7,15 +7,14 @@
     justify-content: space-around;
 
     width: 100vw;
-    height: 100vh;
 }
 
 .executive-container .logo {
     width: calc(100vw - 180px);
     min-width: 120px;
-    max-width: 320px;
+    max-width: 224px;
 
-    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .executive-container h1.board-title {
@@ -96,7 +95,7 @@
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-height: 400px) {
     .executive-container {
         width: 100vw;
         height: 100vh;
