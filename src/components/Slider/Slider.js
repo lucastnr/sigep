@@ -6,12 +6,12 @@ import board from "./SliderData"
 
 export default function Slider({ pos, arrow }) {
 
-  if (arrow == "r") {
+  if (arrow === "r") {
     board[pos - 1].position = "hide"
     board[pos].position = "show"
   }
 
-  else if (arrow == "l") {
+  else if (arrow === "l") {
     board[pos + 1].position = "hide"
     board[pos].position = "show"
   }
@@ -21,7 +21,7 @@ export default function Slider({ pos, arrow }) {
 
       {board.map(({ name, role, phone, position, image }, index) =>
         <div className={`people ${position}`}>
-          <img src={image} className="people-img" />
+          <img src={image} className="people-img" alt={`${name}`} />
 
           <div className="names">
             <h2 className="title">{name}</h2>
@@ -29,7 +29,7 @@ export default function Slider({ pos, arrow }) {
           </div>
 
           <div className="number">
-            <img src="/assets/phone.svg" />
+            <img src="/assets/phone.svg" alt="Phone icon"/>
             <h2>{phone}</h2>
           </div>
         </div>
