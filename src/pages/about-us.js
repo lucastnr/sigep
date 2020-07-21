@@ -9,7 +9,7 @@ export default function AboutUsPage() {
   return (
     <>
       <Helmet title="Sigep | About Us" />
-      <Layout pageContent={<AboutUs />} />
+      <Layout pageContent={AboutUs} />
     </>
   )
 }

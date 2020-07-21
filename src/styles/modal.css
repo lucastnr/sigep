@@ -1,0 +1,13 @@
+.modal {
+    position: absolute;
+    transform: translateX(-105%);
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: 600ms;
+}
+
+.modal.show {
+    transform: translateX(0%);
+}

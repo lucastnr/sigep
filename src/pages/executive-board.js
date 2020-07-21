@@ -9,7 +9,7 @@ export default function ExecutiveBoardPage() {
   return (
     <>
       <Helmet title="Sigep | Executive Board" />
-      <Layout pageContent={<ExecutiveBoard />} />
+      <Layout pageContent={ExecutiveBoard} />
     </>
   )
 }

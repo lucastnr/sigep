@@ -8,7 +8,7 @@ export default function RecruitmentPage() {
   return (
     <>
       <Helmet title="Sigep | Recruitment" />
-      <Layout pageContent={<Recruitment />} />
+      <Layout pageContent={Recruitment} />
     </>
   )
 }

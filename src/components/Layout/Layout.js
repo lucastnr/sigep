@@ -4,14 +4,16 @@ import "../../styles/main.css"
 import Sidebar from "../Sidebar/Sidebar"
 import MetaConfig from "../Meta/MetaConfig"
 
-export default function Layout({ pageContent }) {
+
+export default function Layout( {pageContent} ) {
   const [bar, setBar] = useState(false)
+  const [modalState, setModal] = useState(false)
 
   let mainClass = "background"
+  if (bar || modalState) mainClass = "background blocked"
 
-  if (bar) mainClass = "background blocked"
-
-  function toggleBar() { setBar(!bar) }
+  const toggleBar = () => { setBar(!bar) }
+  const toggleModal = () => { setModal(!modalState) }
 
   return (
     <div className={mainClass}>
@@ -24,9 +26,8 @@ export default function Layout({ pageContent }) {
       </button>
 
       <div id="content">
-        {pageContent}
+        {pageContent(() => toggleModal, modalState)}
       </div>
-
-    </div >
+    </div>
   )
 }

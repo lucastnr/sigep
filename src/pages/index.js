@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet title="Sigep | Home" />
-      <Layout pageContent={<Home />} />
+      <Layout pageContent={Home} />
     </>
   )
 }
