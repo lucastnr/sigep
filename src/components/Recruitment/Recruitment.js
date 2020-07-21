@@ -27,7 +27,7 @@ export default function Recruitment(toggleModal, modalState) {
         <div className="welcome">
           <h1>WELCOME TO</h1>
           <img className="logo" src="/assets/sigep-logo-white.png" alt="SigEp logo" />
-          <h2>WE'RE EXCITED THAT YOU ARE INTERESTED
+          <h2>WE'RE EXCITED THAT YOU ARE INTERESTED 
           IN BECOMING PART OF OUR BROTHERHOOD!</h2>
         </div>
 
