@@ -62,6 +62,14 @@
     margin-bottom: 32px;
 }
 
+.executive-container #bottom-container h1 {
+    color: rgba(240,0,0,0.2);
+}
+
+.executive-container #bottom-container #number-box {
+    border-color: rgba(240,0,0,0.2);
+}
+
 .executive-container .erase {
     z-index: -2;
 }

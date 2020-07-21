@@ -15,6 +15,10 @@ export default function Layout( {pageContent} ) {
   const toggleBar = () => { setBar(!bar) }
   const toggleModal = () => { setModal(!modalState) }
 
+  function showContent() {
+    if (pageContent) return pageContent(() => toggleModal, modalState)
+  }
+
   return (
     <div className={mainClass}>
       <MetaConfig />
@@ -26,7 +30,7 @@ export default function Layout( {pageContent} ) {
       </button>
 
       <div id="content">
-        {pageContent(() => toggleModal, modalState)}
+        {showContent()}
       </div>
     </div>
   )
