@@ -9,12 +9,15 @@ import "../../styles/recruitment.css"
 
 import ContactOur from "../ContactOur/ContactOur"
 import data from "../Slider/SliderData"
+import Calendar from '../Calendar/Calendar'
 
 export default function Recruitment() {
   const [contact, setContact] = useState(false)
+  const [calendar, setCalendar] = useState(false)
+  const [events, setEvents] = useState(false)
 
-  function toggleContact() {
-    setContact(!contact)
+  function toggleModal(set, state) {
+    set(!state)
   }
 
   return (
@@ -22,7 +25,11 @@ export default function Recruitment() {
       <ContactOur
       show={contact}
       data={data[4]}
-      toggle={toggleContact}/>
+      toggle={() => toggleModal(setContact, contact)} />
+
+      <Calendar
+      show={calendar}
+      toggle={() => toggleModal(setCalendar, calendar)} />
 
       <div className="recruitment-container">
         <div className="welcome">
@@ -33,7 +40,7 @@ export default function Recruitment() {
         </div>
 
         <div className="buttons">
-          <button>
+          <button onClick={() => toggleModal(setCalendar, calendar)}>
             <h1>RECRUITMENT CALENDAR</h1>
           </button>
 
@@ -47,7 +54,7 @@ export default function Recruitment() {
             </button>
           </a>
 
-          <button onClick={() => toggleContact()}>
+          <button onClick={() => toggleModal(setContact, contact)}>
             <h1>RECRUITMENT QUESTIONS</h1>
           </button>
         </div>
