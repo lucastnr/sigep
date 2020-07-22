@@ -1,15 +1,18 @@
 import React from 'react'
-import "../../styles/contact-our.css"
-import BottomContent from '../BottomContent/BottomContent'
+import '../../styles/contact-our.css'
 
-export default function ContactOur(toggle, data) {
+export default function ContactOur({ show, toggle, data }) {
+  
+  let classShow = ""
+  if (show) classShow = "show"
+
   return (
-    <div className={"contact"}>
+    <div className={"contact" + " " + classShow}>
       <img
         className="back"
         src="assets/arrow-left-red.svg"
         alt="Back arrow"
-        onClick={toggle()} />
+        onClick={() => toggle()} />
 
       <div className="top">
         <img className="logo" src="/assets/sigep-logo-red.png" />
@@ -37,8 +40,8 @@ export default function ContactOur(toggle, data) {
 
       </div>
       
-      <div className="spacer" />
-      <BottomContent />
+      <div/>
+      <div/>
 
     </div>
   )

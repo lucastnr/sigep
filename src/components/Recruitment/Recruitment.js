@@ -1,33 +1,34 @@
 import React, { useState } from 'react'
 import "../../styles/recruitment.css"
-import "../../components/BottomContent/BottomContent"
 
-import BottomContent from '../../components/BottomContent/BottomContent'
-import Modal from '../Modal/Modal'
+// import {
+//   disableBodyScroll,
+//   enableBodyScroll,
+//   clearAllBodyScrollLocks
+// } from 'body-scroll-lock'
+
 import ContactOur from "../ContactOur/ContactOur"
 import data from "../Slider/SliderData"
 
-export default function Recruitment(toggleModal, modalState) {
-  var modal = ContactOur
+export default function Recruitment() {
+  const [contact, setContact] = useState(false)
 
-  function changingModal(func, toggle) {
-    modal = func
-    return toggle()
+  function toggleContact() {
+    setContact(!contact)
   }
 
   return (
     <>
-      <Modal
-        toggle={toggleModal}
-        show={modalState}
-        data={data[4]}
-        modalContent={modal} />
+      <ContactOur
+      show={contact}
+      data={data[4]}
+      toggle={toggleContact}/>
 
       <div className="recruitment-container">
         <div className="welcome">
           <h1>WELCOME TO</h1>
           <img className="logo" src="/assets/sigep-logo-white.png" alt="SigEp logo" />
-          <h2>WE'RE EXCITED THAT YOU ARE INTERESTED 
+          <h2>WE'RE EXCITED THAT YOU ARE INTERESTED
           IN BECOMING PART OF OUR BROTHERHOOD!</h2>
         </div>
 
@@ -36,7 +37,7 @@ export default function Recruitment(toggleModal, modalState) {
             <h1>RECRUITMENT CALENDAR</h1>
           </button>
 
-          <button onClick={changingModal(BottomContent, toggleModal)}>
+          <button>
             <h1>RECRUITMENT EVENTS</h1>
           </button>
 
@@ -46,12 +47,13 @@ export default function Recruitment(toggleModal, modalState) {
             </button>
           </a>
 
-          <button>
+          <button onClick={() => toggleContact()}>
             <h1>RECRUITMENT QUESTIONS</h1>
           </button>
         </div>
 
-        <BottomContent />
+        <div />
+        <div />
       </div>
     </>
   )

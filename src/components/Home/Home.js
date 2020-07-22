@@ -2,7 +2,6 @@ import React from 'react'
 
 import "../../styles/home.css"
 import BottomContent from "../BottomContent/BottomContent"
-import Modal from "../Modal/Modal"
 
 export default function Home(toggleModal, modalState) {
   return (

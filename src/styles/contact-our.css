@@ -3,12 +3,19 @@
 
     display: flex;
     flex-direction: column;
-
     justify-content: space-between;
     align-items: center;
-
+    
+    position: fixed;
     width: 100vw;
     height: 100vh;
+    
+    transform: translateX(-100%);
+    transition: 500ms;
+}
+
+.contact.show {
+    transform: translateX(0%);
 }
 
 .contact .back {
@@ -130,7 +137,7 @@
     border-color: rgba(240,0,0,0.2);
 }
 
-@media (max-height: 630px) {
+@media (max-height: 650px) {
     .contact .person-info .title {    
         width: 160px;
     }
@@ -144,6 +151,12 @@
     }
 
     .contact #bottom-container {
+        display: none;
+    }
+}
+
+@media (max-height: 450px) {
+    .contact .text-box {
         display: none;
     }
 }
