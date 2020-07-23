@@ -7,9 +7,11 @@ import "../../styles/recruitment.css"
 //   clearAllBodyScrollLocks
 // } from 'body-scroll-lock'
 
-import ContactOur from "../ContactOur/ContactOur"
 import data from "../Slider/SliderData"
+
+import ContactOur from "../ContactOur/ContactOur"
 import Calendar from '../Calendar/Calendar'
+import Events from '../Events/Events'
 
 export default function Recruitment() {
   const [contact, setContact] = useState(false)
@@ -23,13 +25,17 @@ export default function Recruitment() {
   return (
     <>
       <ContactOur
-      show={contact}
-      data={data[4]}
-      toggle={() => toggleModal(setContact, contact)} />
+        show={contact}
+        data={data[4]}
+        toggle={() => toggleModal(setContact, contact)} />
 
       <Calendar
-      show={calendar}
-      toggle={() => toggleModal(setCalendar, calendar)} />
+        show={calendar}
+        toggle={() => toggleModal(setCalendar, calendar)} />
+
+      <Events
+        show={events}
+        toggle={() => toggleModal(setEvents, events)} />
 
       <div className="recruitment-container">
         <div className="welcome">
@@ -44,7 +50,7 @@ export default function Recruitment() {
             <h1>RECRUITMENT CALENDAR</h1>
           </button>
 
-          <button>
+          <button onClick={() => toggleModal(setEvents, events)}>
             <h1>RECRUITMENT EVENTS</h1>
           </button>
 

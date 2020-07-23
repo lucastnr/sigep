@@ -1,0 +1,41 @@
+.events {
+    background-color: #eeeeee;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    
+    transform: translateX(-100%);
+    transition: 500ms;
+}
+
+.events.show {
+    transform: translateX(0%);
+}
+
+.events .back {
+    position: absolute;
+    top: 32px;
+    left: 24px;
+
+    border: 2px solid var(--primary-color);
+    padding: 8px;
+    border-radius: 50%;
+
+    width: 24px;
+}
+
+.events .back:active {
+    background-color: rgba(200,0,0,0.05);
+}
+
+.events .logo {
+    width: calc(100vw - 160px);
+    min-width: 120px;
+    max-width: 240px;
+}
