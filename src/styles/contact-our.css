@@ -156,7 +156,8 @@
 }
 
 @media (max-height: 450px) {
-    .contact .text-box {
+
+    .contact .top .logo {
         display: none;
     }
 }

@@ -71,7 +71,7 @@
 }
 
 .executive-container .erase {
-    z-index: -2;
+    opacity: 0;
 }
 
 

@@ -38,6 +38,8 @@
     width: calc(100vw - 160px);
     min-width: 120px;
     max-width: 240px;
+
+    margin-bottom: 12px;
 }
 
 .calendar .mid {
