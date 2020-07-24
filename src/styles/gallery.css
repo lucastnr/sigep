@@ -33,7 +33,7 @@
 }
 
 .gallery .back:active {
-    background-color: rgba(255,255,255,255.1);
+    background-color: rgba(255,255,255,0.2);
 }
 
 .gallery .top .logo {
@@ -58,8 +58,9 @@
     display: flex;
     flex-direction: row;
 
-    justify-content: center;
+    justify-content: space-around;
     width: 100vw;
+    max-width: 450px;
 }
 
 .gallery .arrow-nav .picture {
@@ -89,10 +90,9 @@
     flex: 0.25
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-height: 650px) {
     .gallery .arrow-nav .arrow {
         width: 32px;
-        margin: 0 8px;
     }
 
     .gallery .arrow-nav .picture {
@@ -106,5 +106,16 @@
 
     .gallery .spacer {
         flex: 0.75;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .gallery .top .logo {
+        display: none;
+    }
+    
+    .gallery .top h1 {
+        border: 0;
+        font-size: 3em;
     }
 }

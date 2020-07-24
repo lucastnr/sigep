@@ -13,6 +13,7 @@ const data =
       name: "Dante's Inferno",
       imgs:
         [
+          "https://www.youtube.com/embed/ZbcATHJkrGM"
         ]
     },
     {
@@ -30,8 +31,10 @@ const data =
       name: "BMS Banquet",
       imgs:
         [
-
-        ]
+          "https://i.ibb.co/pWjfW9K/IMG-2773.jpg",
+          "https://i.ibb.co/8rvKwxz/IMG-2784.jpg",
+          "https://i.ibb.co/WGX2bHW/IMG-2785.jpg"
+          ]
     }
   ]
 

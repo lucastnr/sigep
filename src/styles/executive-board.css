@@ -28,10 +28,11 @@
 
 .executive-container .arrow-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    width: 100vw;
 
+    max-width: 440px;
+    width: 100vw;
     height: 200px;
 
     margin-bottom: 80px;
@@ -40,9 +41,6 @@
 .executive-container .arrow-container .arrow {
     width: 40px;
     margin: 16px;
-    z-index: 1;
-
-    position: relative;
 }
 
 .executive-container .meet-text {
@@ -78,6 +76,10 @@
 @media screen and (max-height: 650px) {
     .executive-container .logo {
         margin-top: 24px;
+    }
+
+    .executive-container .arrow-container .arrow {
+        width: 32px;
     }
 
     .executive-container h1.board-title {

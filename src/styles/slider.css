@@ -24,7 +24,7 @@
 
     margin-top: 12px;
 
-    width: 190px;
+    width: 200px;
 }
 
 .executive-container .slide-container .description {
@@ -59,17 +59,17 @@
     margin-top: 64px;
 }
 
-.hide {
+.executive-container .hide {
     display: none !important;
 }
 
 @media (max-height: 630px) {
     .executive-container .slide-container .title {    
-        width: 160px;
+        width: 180px;
     }
     
     .executive-container .slide-container .description {    
-        width: 140px;
+        width: 160px;
     }
 
     .executive-container .slide-container .people-img {

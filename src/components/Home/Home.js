@@ -6,12 +6,12 @@ import BottomContent from "../BottomContent/BottomContent"
 export default function Home(toggleModal, modalState) {
   return (
     <>
-      <div id="home-container">
+      <div className="home">
         <div style={{ height: 20 }} />
-        <div id="welcome-container">
+        <div className="welcome">
           <h2>WELCOME TO THE HUB OF</h2>
-          <img id="logo" src="/assets/sigep-logo-white.png" alt="SigEp logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/SigEpCrest.png" alt="SigEp logo 2" />
+          <img className="logo" src="/assets/sigep-logo-white.png" alt="SigEp logo" />
+          <img className="badge" src="https://upload.wikimedia.org/wikipedia/en/9/9c/SigEpCrest.png" alt="SigEp logo 2" />
         </div>
 
         <BottomContent />

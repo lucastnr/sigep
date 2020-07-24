@@ -25,22 +25,17 @@ export default function Gallery({ show, toggle, index }) {
     setPic(pic - 1)
   }
 
-  let classShow = ""
-  if (show) classShow = "show"
+  function videoOrImage() {
+    if (gallery[0].includes("youtube")) {
+      return (
+        <iframe
+          src={gallery[pic]}
+          frameborder="0"
+        />
+      )
+    }
 
-  return (
-    <div className={"gallery" + " " + classShow}>
-      <img
-        className="back" src="/assets/arrow-up.svg"
-        onClick={() => toggle()} />
-
-      <div className="top">
-        <img
-          src="/assets/sigep-logo-white.png"
-          className="logo" />
-        <h1>{data[index].name}</h1>
-      </div>
-
+    return (
       <div className="arrow-nav">
         <button
           className={leftArrow}
@@ -56,6 +51,25 @@ export default function Gallery({ show, toggle, index }) {
           <img src="/assets/next-white.svg" />
         </button>
       </div>
+    )
+  }
+
+  let classShow = ""
+  if (show) classShow = "show"
+
+  return (
+    <div className={"gallery" + " " + classShow}>
+      <img
+        className="back" src="/assets/arrow-up.svg"
+        onClick={() => toggle()} />
+
+      <div className="top">
+        <img
+          src="/assets/sigep-logo-white.png"
+          className="logo" />
+        <h1>{data[index].name}</h1>
+      </div>
+      {videoOrImage()}
 
       <BottomContent />
       <div
