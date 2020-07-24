@@ -12,7 +12,7 @@ export default function Calendar({ show, toggle }) {
     <div className={"calendar" + " " + classShow}>
       <img
         className="back"
-        src="assets/arrow-left.svg"
+        src="/assets/arrow-left.svg"
         alt="Back arrow"
         onClick={() => toggle()} />
 
