@@ -73,11 +73,15 @@
 }
 
 .gallery .arrow-nav .arrow {
-    width: 40px;
     margin: 0 12px;
+
 
     position: relative;
     z-index: 1;
+}
+
+.gallery .arrow-nav .arrow img {
+    width: 40px;
 }
 
 .gallery .erase {
