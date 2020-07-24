@@ -2,20 +2,22 @@ import React from 'react'
 import '../../styles/contact-our.css'
 
 export default function ContactOur({ show, toggle, data }) {
-  
+
   let classShow = ""
-  if (show) classShow = "show"
+  if (show) classShow = " show"
 
   return (
-    <div className={"contact" + " " + classShow}>
-      <img
-        className="back"
-        src="/assets/arrow-left.svg"
-        alt="Back arrow"
-        onClick={() => toggle()} />
+    <div className={"contact" + classShow}>
+      <button
+        onClick={() => toggle()}>
+        <img
+          className="back"
+          src="/assets/arrow-left.svg"
+          alt="Back arrow" />
+      </button>
 
       <div className="top">
-        <img className="logo" src="/assets/sigep-logo.png" />
+        <img className="logo" src="/assets/sigep-logo-red.png" alt="Sigep logo" />
         <h1 className="top-text">DON'T HESITATE TO CONTACT OUR {data.role.toUpperCase()}</h1>
       </div>
 
@@ -39,9 +41,9 @@ export default function ContactOur({ show, toggle, data }) {
         </div>
 
       </div>
-      
-      <div/>
-      <div/>
+
+      <div />
+      <div />
 
     </div>
   )

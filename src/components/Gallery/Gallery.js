@@ -7,21 +7,28 @@ import BottomContent from "../BottomContent/BottomContent"
 export default function Gallery({ show, toggle, index }) {
   const [pic, setPic] = useState(0)
   
-  function untoggle() {
-    setPic(0)
-    toggle()
+  let gallery = data[index].imgs,
+  leftArrow = "arrow",
+  rightArrow = "arrow",
+  classShow = ""
+  
+  let galleryClasses = []
+  for (let i = 0; i < gallery.length; i++) {
+    if (i === pic) galleryClasses.push(" show")
+    else galleryClasses.push(" hided")
   }
 
-  let gallery = data[index].imgs,
-    size = gallery.length,
-    leftArrow = "arrow",
-    rightArrow = "arrow"
+  if (show) classShow = " show"
+  if (pic === 0) leftArrow += " erase"
+  if (pic + 1 === gallery.length) rightArrow += " erase"
 
-  if (pic == 0) leftArrow += " erase"
-  if (pic + 1 === size) rightArrow += " erase"
+  function untoggle() {
+    toggle()
+    setTimeout(() => { setPic(0) }, 200);
+  }
 
   function nextImage() {
-    if (pic + 1 === size) return
+    if (pic + 1 === gallery.length) return
     setPic(pic + 1)
   }
 
@@ -31,9 +38,10 @@ export default function Gallery({ show, toggle, index }) {
   }
 
   function videoOrImage() {
-    if (gallery[0].includes("youtube")) {
+    if (gallery[pic].includes("youtube")) {
       return (
         <iframe
+          title={"Video"}
           src={gallery[pic]}
           frameborder="0"
         />
@@ -45,33 +53,45 @@ export default function Gallery({ show, toggle, index }) {
         <button
           className={leftArrow}
           onClick={() => prevImage()}>
-          <img src="/assets/back-white.svg" />
+          <img
+            src="/assets/back-white.svg"
+            alt="Back arrow" />
         </button>
-        <img className="picture" src={gallery[pic]} />
+
+        {gallery.map((picture, pos) =>
+          <img
+            className={"picture" + galleryClasses[pos]}
+            src={picture}
+            alt={"Picture " + pos}
+          />)}
 
         <button
           className={rightArrow}
           onClick={() => nextImage()}
         >
-          <img src="/assets/next-white.svg" />
+          <img
+            src="/assets/next-white.svg"
+            alt="Next arrow" />
         </button>
       </div>
     )
   }
 
-  let classShow = ""
-  if (show) classShow = "show"
-
   return (
-    <div className={"gallery" + " " + classShow}>
-      <img
-        className="back" src="/assets/arrow-left-white.svg"
-        onClick={() => untoggle()} />
+    <div className={"gallery" + classShow}>
+      <button
+        onClick={() => untoggle()}>
+        <img
+          className="back" src="/assets/arrow-left-white.svg"
+          alt="Back arrow" />
+      </button>
 
       <div className="top">
         <img
           src="/assets/sigep-logo-white.png"
-          className="logo" />
+          className="logo"
+          alt="Sigep logo" />
+
         <h1>{data[index].name}</h1>
       </div>
       {videoOrImage()}

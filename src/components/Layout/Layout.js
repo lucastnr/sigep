@@ -7,20 +7,15 @@ import MetaConfig from "../Meta/MetaConfig"
 
 export default function Layout( {pageContent} ) {
   const [bar, setBar] = useState(false)
-  const [modalState, setModal] = useState(false)
-
-  let mainClass = "background"
-  if (bar || modalState) mainClass = "background blocked"
 
   const toggleBar = () => { setBar(!bar) }
-  const toggleModal = () => { setModal(!modalState) }
 
   function showContent() {
-    if (pageContent) return pageContent(() => toggleModal, modalState)
+    if (pageContent) return pageContent()
   }
 
   return (
-    <div className={mainClass}>
+    <div className="background">
       <MetaConfig />
 
       <Sidebar show={bar} toggle={toggleBar} />

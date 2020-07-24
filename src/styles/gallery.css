@@ -72,6 +72,10 @@
     object-fit: cover;
 }
 
+.gallery .arrow-nav .picture.hided {
+    display: none;
+}
+
 .gallery .arrow-nav .arrow {
     margin: 0 12px;
 

@@ -2,18 +2,17 @@ import React, { useState } from 'react'
 import "../../styles/events.css"
 
 import Gallery from "../Gallery/Gallery"
-import data from '../Gallery/PicturesData'
 
 export default function Events({ show, toggle }) {
   const [gallery, setGallery] = useState(false)
   const [picIndex, setPics] = useState(0)
 
   let classShow = ""
-  if (show) classShow = "show"
+  if (show) classShow = " show"
 
   function toggleModal(set, state, index) {
     set(!state)
-    if (index != undefined) setPics(index)
+    if (index !== undefined) setPics(index)
   }
 
   return (
@@ -24,15 +23,17 @@ export default function Events({ show, toggle }) {
         index={picIndex}
       />
 
-      <div className={"events" + " " + classShow}>
-        <img
-          className="back"
-          src="/assets/arrow-left.svg"
-          alt="Back arrow"
-          onClick={() => toggle()} />
+      <div className={"events" + classShow}>
+        <button
+          onClick={() => toggle()}>
+          <img
+            className="back"
+            src="/assets/arrow-left.svg"
+            alt="Back arrow" />
+        </ button>
 
         <div className="top">
-          <img className="logo" src="/assets/sigep-logo-red.png" />
+          <img className="logo" src="/assets/sigep-logo-red.png" alt="Sigep logo" />
           <h1>RECRUITMENT EVENTS</h1>
         </div>
 
@@ -49,7 +50,7 @@ export default function Events({ show, toggle }) {
             <h1>Intramurals</h1>
           </button>
 
-          <button  onClick={() => toggleModal(setGallery, gallery, 3)}>
+          <button onClick={() => toggleModal(setGallery, gallery, 3)}>
             <h1>BMS Banquet</h1>
           </button>
         </div>

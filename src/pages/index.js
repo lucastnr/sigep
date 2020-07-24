@@ -1,7 +1,7 @@
 import React from "react"
 
-import Home from "../components/Home/Home"
 import Layout from "../components/Layout/Layout"
+import Home from "../components/Home/Home"
 import Helmet from "react-helmet"
 
 export default function HomePage() {
