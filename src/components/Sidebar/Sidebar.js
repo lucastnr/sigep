@@ -29,7 +29,7 @@ const Sidebar = ({ show, toggle }) => {
         <div className="top-section">
           <div /> {/* empty div */}
           <button className="arrow" onClick={() => toggle()}>
-            <img src="/assets/arrow-left.svg" alt="Arrow left" />
+            <img src="/assets/arrow-left-white.svg" alt="Arrow left" />
           </button>
         </div>
 

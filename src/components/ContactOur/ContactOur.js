@@ -15,7 +15,7 @@ export default function ContactOur({ show, toggle, data }) {
         onClick={() => toggle()} />
 
       <div className="top">
-        <img className="logo" src="/assets/sigep-logo-red.png" />
+        <img className="logo" src="/assets/sigep-logo.png" />
         <h1 className="top-text">DON'T HESITATE TO CONTACT OUR {data.role.toUpperCase()}</h1>
       </div>
 

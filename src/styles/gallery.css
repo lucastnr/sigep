@@ -78,8 +78,6 @@
 
     position: relative;
     z-index: 1;
-
-    transition: 0ms;
 }
 
 .gallery .erase {

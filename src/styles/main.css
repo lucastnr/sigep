@@ -22,7 +22,7 @@
     -ms-user-select: none;
     user-select: none;
 
-    transition: 100ms;
+    transition: 200ms;
 }
 
 h1, h2, h3, h4, h5 {
