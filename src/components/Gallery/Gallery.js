@@ -6,6 +6,11 @@ import BottomContent from "../BottomContent/BottomContent"
 
 export default function Gallery({ show, toggle, index }) {
   const [pic, setPic] = useState(0)
+  
+  function untoggle() {
+    setPic(0)
+    toggle()
+  }
 
   let gallery = data[index].imgs,
     size = gallery.length,
@@ -60,8 +65,8 @@ export default function Gallery({ show, toggle, index }) {
   return (
     <div className={"gallery" + " " + classShow}>
       <img
-        className="back" src="/assets/arrow-up.svg"
-        onClick={() => toggle()} />
+        className="back" src="/assets/arrow-left-white.svg"
+        onClick={() => untoggle()} />
 
       <div className="top">
         <img
