@@ -10,7 +10,7 @@ export default function ContactOur({ show, toggle, data }) {
     <div className={"contact" + " " + classShow}>
       <img
         className="back"
-        src="/assets/arrow-left-red.svg"
+        src="/assets/arrow-left.svg"
         alt="Back arrow"
         onClick={() => toggle()} />
 
