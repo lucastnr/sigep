@@ -1,0 +1,76 @@
+.mixers {
+    background-color: #eeeeee;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.mixers .top .logo {
+    width: calc(100vw - 180px);
+    min-width: 120px;
+    max-width: 240px;
+
+    margin-bottom: 24px;
+}
+
+.mixers .top h1 {
+    color: var(--primary-color);
+    font-weight: 900;
+    font-size: 1.6em;
+}
+
+.mixers .buttons {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    margin-top: 64px;
+    width: 100vw;
+    height: 320px;
+}
+
+.mixers .buttons button {
+
+    width: calc(100vw - 72px);
+    max-width: 304px;
+
+    margin: 24px 0;
+
+    height: 120px;
+
+    border: 4px solid var(--primary-color);
+    border-radius: 14px;
+}
+
+.mixers .buttons button:active {
+    background-color: rgba(0,0,0, 0.05);
+}
+
+.mixers .buttons h1 {
+    font-size: 2em;
+    font-weight: 900;
+    color: black;
+}
+
+@media screen and (max-height: 600px) {
+    .mixers .buttons {
+        margin: 0;
+    }
+
+    .mixers .buttons button {
+        margin: 12px 0;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .mixers .top .logo {
+        display: none;
+    }
+
+    .mixers .top h1 {
+        font-size: 2em;
+    }
+}

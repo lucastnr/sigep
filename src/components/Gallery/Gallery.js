@@ -6,12 +6,12 @@ import BottomContent from "../BottomContent/BottomContent"
 
 export default function Gallery({ show, toggle, index }) {
   const [pic, setPic] = useState(0)
-  
+
   let gallery = data[index].imgs,
-  leftArrow = "arrow",
-  rightArrow = "arrow",
-  classShow = ""
-  
+    leftArrow = "arrow",
+    rightArrow = "arrow",
+    classShow = ""
+
   let galleryClasses = []
   for (let i = 0; i < gallery.length; i++) {
     if (i === pic) galleryClasses.push(" show")
@@ -38,41 +38,52 @@ export default function Gallery({ show, toggle, index }) {
   }
 
   function videoOrImage() {
-    if (gallery[pic].includes("youtube")) {
+    if (gallery.length !== 0) {
+      if (gallery[pic].includes("youtube")) {
+        return (
+          <iframe
+            title={"Video"}
+            src={gallery[pic]}
+            frameborder="0"
+          />
+        )
+      }
+
       return (
-        <iframe
-          title={"Video"}
-          src={gallery[pic]}
-          frameborder="0"
-        />
+        <div className="arrow-nav">
+          <button
+            className={leftArrow}
+            onClick={() => prevImage()}>
+            <img
+              src="/assets/back-white.svg"
+              alt="Back arrow" />
+          </button>
+
+          {gallery.map((picture, pos) =>
+            <img
+              className={"picture" + galleryClasses[pos]}
+              src={picture}
+              alt={"Picture " + pos}
+            />)}
+
+          <button
+            className={rightArrow}
+            onClick={() => nextImage()}
+          >
+            <img
+              src="/assets/next-white.svg"
+              alt="Next arrow" />
+          </button>
+        </div>
       )
     }
 
     return (
-      <div className="arrow-nav">
-        <button
-          className={leftArrow}
-          onClick={() => prevImage()}>
-          <img
-            src="/assets/back-white.svg"
-            alt="Back arrow" />
-        </button>
-
-        {gallery.map((picture, pos) =>
-          <img
-            className={"picture" + galleryClasses[pos]}
-            src={picture}
-            alt={"Picture " + pos}
-          />)}
-
-        <button
-          className={rightArrow}
-          onClick={() => nextImage()}
-        >
-          <img
-            src="/assets/next-white.svg"
-            alt="Next arrow" />
-        </button>
+      <div className="coming-soon">
+        <h1>COMING SOON</h1>
+        <img
+        src="/assets/under-construction.png"
+        alt="Under construction" />
       </div>
     )
   }
