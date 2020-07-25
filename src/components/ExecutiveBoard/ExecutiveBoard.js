@@ -37,7 +37,7 @@ export default function ExecutiveBoard() {
         <Slider pos={slide.pos} arrow={slide.arrow} />
 
         <button className={rightArrow} onClick={() => increase()}>
-          <img className="arrow" src="/assets/next.svg" alt="Right arrow" />
+          <img className="arrow" src="/assets/next-black.svg" alt="Right arrow" />
         </button>
       </div>
 
