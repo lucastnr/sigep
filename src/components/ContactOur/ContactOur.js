@@ -36,7 +36,7 @@ export default function ContactOur({ show, toggle, data }) {
 
         <div className="text-box">
           <a href={`tel:${data.phone}`}>
-            <h2>CLICK HERE TO CALL {data.name.toUpperCase()}</h2>
+            <h2>CLICK HERE TO CALL<br/>{data.name.toUpperCase()}</h2>
           </a>
         </div>
 
