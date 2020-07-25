@@ -39,7 +39,6 @@ export default function ContactOur({ show, toggle, data }) {
             <h2>CLICK HERE TO CALL<br/>{data.name.toUpperCase()}</h2>
           </a>
         </div>
-
       </div>
 
       <div />
