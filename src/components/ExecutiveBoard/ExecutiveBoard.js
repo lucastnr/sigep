@@ -25,9 +25,13 @@ export default function ExecutiveBoard() {
 
   return (
     <div className="executive-container">
-      <img className="logo" src="/assets/sigep-logo-red.png" alt="SigEp Logo" />
 
-      <h1 className="board-title">2020 - 2021<br />EXECUTIVE BOARD</h1>
+      <div className="first spacer" /> {/*Empty div*/}
+
+      <div className="top">
+        <img className="logo" src="/assets/sigep-logo-red.png" alt="SigEp Logo" />
+        <h1 className="board-title">2020 - 2021<br />EXECUTIVE BOARD</h1>
+      </div>
 
       <div className={"arrow-container"}>
         <button className={leftArrow} onClick={() => decrease()}>
@@ -43,7 +47,7 @@ export default function ExecutiveBoard() {
 
       <h1 className="meet-text">USE THE ARROWS TO MEET OUR EXECUTIVE BOARD</h1>
 
-      <div style={{ flex: 0.6 }} /> {/*Empty div*/}
+      <div className="second spacer" /> {/*Empty div*/}
 
     </div>
   )

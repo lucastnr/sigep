@@ -7,7 +7,7 @@ export default function Home(toggleModal, modalState) {
   return (
     <>
       <div className="home">
-        <div style={{ height: 20 }} />
+        <div className="spacer"/>
         <div className="welcome">
           <h2>WELCOME TO THE HUB OF</h2>
           <img className="logo" src="/assets/sigep-logo-white.png" alt="SigEp logo" />

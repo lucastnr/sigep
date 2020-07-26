@@ -11,28 +11,31 @@
     height: 100vh;
 }
 
-.welcome {
+.home .spacer {
+    flex: 0.33;
+}
+
+.home .welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.welcome h2 {
+.home .welcome h2 {
     min-width: 200px;
     width: 40vw;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
-.welcome img {
-    width: 100px;
-    margin-bottom: 12px;
+.home .welcome .badge {
+    width: 136px;
 }
 
-.welcome .logo {
+.home .welcome .logo {
     width: calc(100vw - 64px);
     min-width: 120px;
-    max-width: 200px;
+    max-width: 240px;
 
     height: auto;
 }
@@ -44,6 +47,22 @@
 @media (max-height: 550px) {
     .home #bottom-container {
         padding-bottom: 12px;
+    }
+
+    .home .welcome h2 {
+        font-size: 1.5em;
+    }
+
+    .home .spacer {
+        flex: 0.5;
+    }
+
+    .home .welcome .logo {
+        max-width: 200px;
+    }
+
+    .home .welcome .badge {
+        width: 80px;
     }
 }
 
