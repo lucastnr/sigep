@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  A ReactJS Website. / Um website ReactJS
+  Um website ReactJS
 </h1>
 
 <p>
