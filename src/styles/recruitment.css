@@ -19,7 +19,7 @@
     width: calc(100vw - 180px);
     min-width: 120px;
     max-width: 160px;
-    margin-top: 8px;
+    margin-top: 12px;
     height: auto;
 }
 
@@ -71,7 +71,7 @@
         justify-content: space-around;
     }
     .recruitment-container .welcome {
-        padding-top: 12px;
+        padding-top: 32px;
     }
     .recruitment-container .buttons {
         height: 240px;
