@@ -24,7 +24,7 @@ export default function Gallery({ show, toggle, index }) {
 
   function untoggle() {
     toggle()
-    setTimeout(() => { setPic(0) }, 200);
+    setPic(0)
   }
 
   function nextImage() {
